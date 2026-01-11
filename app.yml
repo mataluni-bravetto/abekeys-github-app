@@ -1,0 +1,21 @@
+# GitHub App Manifest for AbeKEYs
+# Use this when creating the app at github.com/settings/apps/new
+
+name: AbeKEYs Secret Scanner
+description: Scan PRs for exposed secrets and block merges with critical findings
+url: https://github.com/mataluni-bravetto/abekeys
+# Update this after deploying to Vercel:
+webhook_url: https://abekeys-github-app.vercel.app/webhook
+
+public: true
+default_events:
+  - pull_request
+
+default_permissions:
+  checks: write
+  contents: read
+  pull_requests: write
+  metadata: read
+
+# Callback URL for OAuth (if needed later)
+# callback_url: https://abekeys-github-app.vercel.app/callback

@@ -1,0 +1,19 @@
+{
+  "name": "abekeys-github-app",
+  "version": "1.0.0",
+  "description": "AbeKEYs GitHub App - Scan and block exposed secrets in PRs",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "test": "node src/scanner.test.js"
+  },
+  "keywords": ["github-app", "security", "secrets", "abekeys"],
+  "author": "Michael Mataluni <mike@bravetto.com>",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@octokit/webhooks": "^13.2.0",
+    "@octokit/app": "^15.0.0"
+  }
+}

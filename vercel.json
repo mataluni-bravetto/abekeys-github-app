@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "name": "abekeys-github-app",
+  "functions": {
+    "api/webhook.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/webhook.js"
+    },
+    {
+      "src": "/webhook",
+      "dest": "/api/webhook.js"
+    }
+  ]
+}
